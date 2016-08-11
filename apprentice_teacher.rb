@@ -21,6 +21,11 @@ include High_five
   #   "Cool, I've always wanted to teach phase #{num}!"
   # end
 
+  #trying to get performance error to raise NoMethodError
+  def performance_rating
+    raise NoMethodError
+  end
+
   def teach_stuff
     response = ""
     response += "Listen, class, this is how everything works. "
