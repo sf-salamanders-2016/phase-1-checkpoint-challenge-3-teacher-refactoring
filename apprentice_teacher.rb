@@ -1,4 +1,6 @@
-class ApprenticeTeacher
+require_relative 'education_related_person'
+
+class ApprenticeTeacher < EducationRelatedPerson
   attr_reader :age, :salary, :phase, :target_raise
   attr_accessor :name
 
@@ -7,15 +9,6 @@ class ApprenticeTeacher
     @name = options.fetch(:name, "")
     @target_raise = 800
     @phase = 3
-  end
-
-  def offer_high_five
-    "High five!"
-  end
-
-  def set_phase(num)
-    @phase = num
-    "Cool, I've always wanted to teach phase #{num}!"
   end
 
   def teach_stuff
