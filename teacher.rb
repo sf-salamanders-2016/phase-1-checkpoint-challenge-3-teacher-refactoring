@@ -1,18 +1,18 @@
+require_relative 'dbc'
+
 class Teacher
   attr_reader :age, :salary, :phase, :performance_rating, :target_raise
   attr_accessor :name
 
+  include Dbc
+
   PERFORMANCE_RATING_REQ = 90
 
   def initialize(options={})
-    @phase = 3
     @age = options.fetch(:age, 0)
     @name = options.fetch(:name, "")
     @target_raise = 1000
-  end
-
-  def offer_high_five
-    "High five!"
+    @phase = 3
   end
 
   def set_phase(num)
@@ -39,6 +39,7 @@ class Teacher
 
   def set_performance_rating(rating)
     response = ""
+    raise NoMethodError unless rating # raise error in case of no rating
     if rating > self.class::PERFORMANCE_RATING_REQ
       receive_raise(@target_raise)
       response = "Yay, I'm a great employee!"
@@ -48,4 +49,17 @@ class Teacher
     end
     response
   end
+
+  # def set_performance_rating(rating)
+  #   response = ""
+  #   if rating > self.class::PERFORMANCE_RATING_REQ
+  #     receive_raise(@target_raise)
+  #     response = "Yay, I'm a great employee!"
+  #   else
+  #     response += "Oh, well -- thanks to this actionable, specific, and kind "
+  #     response += "feedback, I'll do better next time."
+  #   end
+  #   response
+  # end
+
 end
