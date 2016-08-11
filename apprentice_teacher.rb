@@ -3,15 +3,13 @@ require_relative 'teaching_person'
 
 class ApprenticeTeacher < TheTeacher
 
-RATING_THRESHOLD = 80
+  RATING_THRESHOLD = 80
 
-  def teach_stuff
-    response = ""
-    response += "Listen, class, this is how everything works. "
-    response += "*drops crazy knowledge bomb* "
-    response += "... You're welcome."
-    response
-  end
+  RESPONSE = ""
+  RESPONSE += "Listen, class, this is how everything works. "
+  RESPONSE += "*drops crazy knowledge bomb* "
+  RESPONSE += "... You're welcome."
+  RESPONSE
 
   def attend_training_session
     puts "Whoa. I know ruby-fu"

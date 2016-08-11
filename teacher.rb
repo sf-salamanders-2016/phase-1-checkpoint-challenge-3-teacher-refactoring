@@ -1,15 +1,14 @@
 require_relative 'person'
+require_relative 'teaching_person'
 
 class Teacher < TheTeacher
   attr_reader :performance_rating
 
   RATING_THRESHOLD = 90
+  RESPONSE = ""
+  RESPONSE += "Listen, class, this is how everything works, fo SHO! "
+  RESPONSE += "*drops flat-out insane knowledge bomb* "
+  RESPONSE += "... You're welcome. *saunters away*"
+  RESPONSE
 
-  def teach_stuff
-    response = ""
-    response += "Listen, class, this is how everything works, fo SHO! "
-    response += "*drops flat-out insane knowledge bomb* "
-    response += "... You're welcome. *saunters away*"
-    response
-  end
 end

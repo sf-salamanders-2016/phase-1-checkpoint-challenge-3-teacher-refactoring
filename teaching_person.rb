@@ -1,7 +1,7 @@
 require_relative 'person'
 
 class TheTeacher < Person
-    attr_reader :salary, :target_raise
+  attr_reader :salary, :target_raise
 
   def initialize(options={})
     @target_raise =  options.fetch(:target_raise, 800)
@@ -34,5 +34,7 @@ class TheTeacher < Person
     response
   end
 
-
+  def teach_stuff
+    self.class::RESPONSE
+  end
 end
