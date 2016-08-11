@@ -20,6 +20,6 @@ An options hash allows arguments to be given in any order.  It also allows defau
 
 4. What is the purpose of the private keyword in a class? What does it protect you from and why is that valuable?
 
-The private keyword makes certain methods private to an instance, so they can't be accessed from outside that instance of the class.
+The private keyword makes certain methods private to an instance, so they can't be accessed from outside that instance of the class.  This might be useful if, for example, a method would reveal sensitive information.
 
 5. Why are concepts like encapsulation, single responsibility, and abstraction important? Now that you've been programming for a while, have you seen any advantages for yourself, or can you imagine them in the future?
