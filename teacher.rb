@@ -1,7 +1,7 @@
 require_relative "high_five"
 
 class Teacher
-  attr_reader :age, :salary, :phase, :performance_rating, :target_raise
+  attr_reader :age, :salary, :phase, :performance_rating, :target_raise, :rating_threshold
   attr_accessor :name
 
   def initialize(options={})
@@ -9,6 +9,7 @@ class Teacher
     @age = options.fetch(:age, 0)
     @name = options.fetch(:name, "")
     @target_raise = 1000
+    @rating_threshold = 90
   end
 
 include High_five
@@ -37,7 +38,7 @@ include High_five
 
   def set_performance_rating(rating)
     response = ""
-    if rating > 90
+    if rating > @rating_threshold
       receive_raise(@target_raise)
       response = "Yay, I'm a great employee!"
     else
