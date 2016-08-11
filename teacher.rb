@@ -1,3 +1,5 @@
+require_relative "high_five"
+
 class Teacher
   attr_reader :age, :salary, :phase, :performance_rating, :target_raise
   attr_accessor :name
@@ -9,9 +11,7 @@ class Teacher
     @target_raise = 1000
   end
 
-  def offer_high_five
-    "High five!"
-  end
+include High_five
 
   def set_phase(num)
     @phase = num

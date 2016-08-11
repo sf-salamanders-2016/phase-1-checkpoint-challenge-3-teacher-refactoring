@@ -1,7 +1,10 @@
+require_relative "high_five"
+
 class ApprenticeTeacher
   attr_reader :age, :salary, :phase, :target_raise
   attr_accessor :name
 
+  include
   def initialize(options={})
     @age = options.fetch(:age, 0)
     @name = options.fetch(:name, "")
@@ -9,9 +12,7 @@ class ApprenticeTeacher
     @phase = 3
   end
 
-  def offer_high_five
-    "High five!"
-  end
+include High_five
 
   def set_phase(num)
     @phase = num
