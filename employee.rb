@@ -10,7 +10,6 @@ class Employee < Person
   end
 
   def teach_stuff
-
     response = ""
     if self.class == Teacher
       response += "Listen, class, this is how everything works, fo SHO! "
@@ -21,10 +20,8 @@ class Employee < Person
       response += "*drops crazy knowledge bomb* "
       response += "... You're welcome."
     end
-
     response
   end
-
 
   def salary=(new_salary)
     puts "This better be good!"
@@ -45,5 +42,4 @@ class Employee < Person
     end
     response
   end
-
 end

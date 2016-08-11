@@ -29,5 +29,4 @@ class Person
     @phase = num
     response
   end
-
 end
