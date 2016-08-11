@@ -16,11 +16,11 @@ class Instructor < SchoolMember
 	end
 
 	def teach_stuff
-	    response = ""
-    	response += "Listen, class, this is how everything works, fo SHO! "
-    	response += "*drops flat-out insane knowledge bomb* "
-    	respones += "You're my favorite class!!"
-    	response
+		response = ""
+		response += "Listen, class, this is how everything works, fo SHO! "
+		response += "*drops flat-out insane knowledge bomb* "
+		respones += "You're my favorite class!!"
+		response
 	end
 
 	def set_performance_rating(rating)
