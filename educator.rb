@@ -1,6 +1,5 @@
 require_relative 'person'
 
-
 class Educator < Person
 
   attr_reader :phase, :salary, :target_raise

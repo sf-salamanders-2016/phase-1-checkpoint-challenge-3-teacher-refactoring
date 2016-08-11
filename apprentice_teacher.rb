@@ -9,7 +9,6 @@ class ApprenticeTeacher < Educator
     @raise_rating = 80
   end
 
-
   def teach_stuff
     response = ""
     response += "Listen, class, this is how everything works. "
