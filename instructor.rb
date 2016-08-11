@@ -4,6 +4,11 @@ class Instructor < SchoolMember
 
 	attr_reader :salary, :target_raise
 
+	def initialize(options={})
+		super
+		@phase = 3
+	end
+
 	def salary=(new_salary)
 		#Should be in a more generic school employee class
 		puts "This better be good!"
@@ -11,7 +16,11 @@ class Instructor < SchoolMember
 	end
 
 	def teach_stuff
-	    response = "Default teaching stuff, blah, blah, blah"
+	    response = ""
+    	response += "Listen, class, this is how everything works, fo SHO! "
+    	response += "*drops flat-out insane knowledge bomb* "
+    	respones += "You're my favorite class!!"
+    	response
 	end
 
 	def set_performance_rating(rating)

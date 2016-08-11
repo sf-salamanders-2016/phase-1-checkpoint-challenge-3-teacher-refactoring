@@ -2,11 +2,10 @@ require_relative 'school_member'
 require_relative 'instructor'
 
 class Teacher < Instructor
-  attr_reader :salary, :target_raise, :performance_rating
+  attr_reader :performance_rating
 
   def initialize(options={})
     super
-    @phase = 3
     @target_raise = 1000
   end
 

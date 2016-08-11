@@ -5,7 +5,6 @@ class ApprenticeTeacher < Instructor
 
   def initialize(options={})
     super
-    @phase = 3
     @target_raise = 800
   end
 
