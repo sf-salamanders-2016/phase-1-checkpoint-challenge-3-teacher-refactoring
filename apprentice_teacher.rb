@@ -3,6 +3,7 @@ require_relative 'instructors'
 
 class ApprenticeTeacher < Instructors
   attr_reader :salary, :phase, :target_raise
+  RATING = 80
   # attr_reader :age
   # attr_accessor :name
 
@@ -10,6 +11,7 @@ class ApprenticeTeacher < Instructors
     super
     @target_raise = 800
     @phase = 3
+   # @unique_rating = 80
   end
 
   # @age = options.fetch(:age, 0)
@@ -44,7 +46,7 @@ class ApprenticeTeacher < Instructors
 
   def set_performance_rating(rating)
     response = ""
-    if rating > 80
+    if rating > self.class::RATING
       response = "Yay, I'm a great employee!"
       receive_raise(@target_raise)
     else
