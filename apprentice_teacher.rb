@@ -1,6 +1,7 @@
 require_relative "high_five"
+require_relative "Teacher"
 
-class ApprenticeTeacher
+class ApprenticeTeacher < Teacher
   attr_reader :age, :salary, :phase, :target_raise
   attr_accessor :name
 
@@ -14,10 +15,10 @@ class ApprenticeTeacher
 
 include High_five
 
-  def set_phase(num)
-    @phase = num
-    "Cool, I've always wanted to teach phase #{num}!"
-  end
+  # def set_phase(num)
+  #   @phase = num
+  #   "Cool, I've always wanted to teach phase #{num}!"
+  # end
 
   def teach_stuff
     response = ""
@@ -27,14 +28,14 @@ include High_five
     response
   end
 
-  def salary=(new_salary)
-    puts "This better be good!"
-    @salary = new_salary
-  end
+  # def salary=(new_salary)
+  #   puts "This better be good!"
+  #   @salary = new_salary
+  # end
 
-  def receive_raise(raise)
-    @salary += raise
-  end
+  # def receive_raise(raise)
+  #   @salary += raise
+  # end
 
   def set_performance_rating(rating)
     response = ""
