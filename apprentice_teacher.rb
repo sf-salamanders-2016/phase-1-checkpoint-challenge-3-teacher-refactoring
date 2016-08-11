@@ -22,7 +22,7 @@ class ApprenticeTeacher < Teacher
 
 
   def set_performance_rating(rating)
-    raise NoMethodError
+    # raise NoMethodError
     response = ""
     if rating > RATINGCONSTANT
       response = "Yay, I'm a great employee!"
