@@ -1,4 +1,5 @@
 require_relative '../teacher'
+require_relative '../apprentice_teacher'
 
 describe Teacher do
   let(:jan) { Teacher.new({name: "Jan", age: 35}) }
