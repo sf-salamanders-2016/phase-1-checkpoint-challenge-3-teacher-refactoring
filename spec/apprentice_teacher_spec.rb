@@ -1,8 +1,8 @@
 require_relative '../apprentice_teacher'
 
 describe ApprenticeTeacher do
-  let(:rey) { ApprenticeTeacher.new({name: "Rey", age: 21}) }
-  let(:default_apprentice) { ApprenticeTeacher.new }
+  let(:rey) { ApprenticeTeacher.new({name: "Rey", age: 21, phase: 3, target_raise: 800}) }
+  let(:default_apprentice) { ApprenticeTeacher.new({target_raise: 800}) }
 
   it "allows the name to change" do
     rey.name = "Rey"

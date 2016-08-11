@@ -1,7 +1,7 @@
 require_relative '../student'
 
 describe Student do
-  let(:amir) { Student.new({name: "Amir Fayek", age: 21}) }
+  let(:amir) { Student.new({name: "Amir Fayek", age: 21, phase: 1}) }
 
   it "offers high fives" do
     expect(amir.offer_high_five).to eq("High five!")
