@@ -1,12 +1,14 @@
 require_relative 'teacher'
+require_relative 'teaching_mod'
 
 class ApprenticeTeacher < Teacher
   attr_reader :age, :salary, :phase, :target_raise
   attr_accessor :name
   RATINGCONSTANT = 80
+  include Teaching
 
   def initialize(options={})
-    super(@age,@name,@phase)
+    super
     @target_raise = 800
   end
 
@@ -18,7 +20,9 @@ class ApprenticeTeacher < Teacher
     response
   end
 
+
   def set_performance_rating(rating)
+    raise NoMethodError
     response = ""
     if rating > RATINGCONSTANT
       response = "Yay, I'm a great employee!"
