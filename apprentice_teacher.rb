@@ -2,26 +2,15 @@ require_relative "high_five"
 require_relative "Teacher"
 
 class ApprenticeTeacher < Teacher
-  # attr_reader :age, :salary, :phase, :target_raise
-  # attr_accessor :name
 
-  include
+
   def initialize(options={})
     super
     @target_raise = 800
-    # @age = options.fetch(:age, 0)
-    # @name = options.fetch(:name, "")
-    # @phase = 3
   end
 
-include High_five
+  include High_five
 
-  # def set_phase(num)
-  #   @phase = num
-  #   "Cool, I've always wanted to teach phase #{num}!"
-  # end
-
-  #trying to get performance error to raise NoMethodError
   def performance_rating
     raise NoMethodError
   end
@@ -33,15 +22,6 @@ include High_five
     response += "... You're welcome."
     response
   end
-
-  # def salary=(new_salary)
-  #   puts "This better be good!"
-  #   @salary = new_salary
-  # end
-
-  # def receive_raise(raise)
-  #   @salary += raise
-  # end
 
   def set_performance_rating(rating)
     response = ""
