@@ -1,29 +1,22 @@
+require_relative 'teaching_mod'
+
 class Teacher
   attr_reader :age, :salary, :phase, :performance_rating, :target_raise
   attr_accessor :name
+
+  RATINGCONSTANT = 90
+  include Teaching
 
   def initialize(options={})
     @phase = 3
     @age = options.fetch(:age, 0)
     @name = options.fetch(:name, "")
+    #super
     @target_raise = 1000
   end
 
   def offer_high_five
     "High five!"
-  end
-
-  def set_phase(num)
-    @phase = num
-    "Cool, I've always wanted to teach phase #{num}!"
-  end
-
-  def teach_stuff
-    response = ""
-    response += "Listen, class, this is how everything works, fo SHO! "
-    response += "*drops flat-out insane knowledge bomb* "
-    response += "... You're welcome. *saunters away*"
-    response
   end
 
   def salary=(new_salary)
@@ -37,7 +30,7 @@ class Teacher
 
   def set_performance_rating(rating)
     response = ""
-    if rating > 90
+    if rating > RATINGCONSTANT
       receive_raise(@target_raise)
       response = "Yay, I'm a great employee!"
     else

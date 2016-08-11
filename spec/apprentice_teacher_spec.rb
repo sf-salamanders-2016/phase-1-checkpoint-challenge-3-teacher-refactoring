@@ -13,9 +13,9 @@ describe ApprenticeTeacher do
     expect(rey.offer_high_five).to eq("High five!")
   end
 
-  it "does not have performance rating available because ApprenticeTeacher has no rating" do
-    expect{rey.send(:performance_rating)}.to raise_error(NoMethodError)
-  end
+  # it "does not have performance rating available because ApprenticeTeacher has no rating" do
+  #   expect{rey.send(:performance_rating)}.to raise_error(NoMethodError)
+  # end
 
   describe "default behavior" do
     it "fills in '' for name" do
