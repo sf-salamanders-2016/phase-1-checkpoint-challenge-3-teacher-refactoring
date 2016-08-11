@@ -1,8 +1,8 @@
 require_relative '../teacher'
 
 describe Teacher do
-  let(:jan) { Teacher.new({name: "Jan", age: 35}) }
-  let(:default_teacher) { Teacher.new }
+  let(:jan) { Teacher.new({name: "Jan", age: 35, phase: 3, target_raise: 1000}) }
+  let(:default_teacher) { Teacher.new({target_raise: 1000}) }
 
   it "offers high fives" do
     expect(jan.offer_high_five).to eq("High five!")
