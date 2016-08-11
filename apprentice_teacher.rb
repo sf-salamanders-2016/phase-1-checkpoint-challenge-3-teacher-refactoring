@@ -2,15 +2,16 @@ require_relative "high_five"
 require_relative "Teacher"
 
 class ApprenticeTeacher < Teacher
-  attr_reader :age, :salary, :phase, :target_raise
-  attr_accessor :name
+  # attr_reader :age, :salary, :phase, :target_raise
+  # attr_accessor :name
 
   include
   def initialize(options={})
-    @age = options.fetch(:age, 0)
-    @name = options.fetch(:name, "")
+    super
     @target_raise = 800
-    @phase = 3
+    # @age = options.fetch(:age, 0)
+    # @name = options.fetch(:name, "")
+    # @phase = 3
   end
 
 include High_five
