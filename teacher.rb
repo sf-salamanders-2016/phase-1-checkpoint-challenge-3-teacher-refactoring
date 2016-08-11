@@ -1,5 +1,7 @@
-class Teacher
-  attr_reader :age, :salary, :phase, :performance_rating, :target_raise
+require_relative "apprentice_teacher"
+
+class Teacher < ApprenticeTeacher
+  attr_reader :age, :salary, :phase, :performance_rating, :target_raise, :attend_training_session
   attr_accessor :name
 
   def initialize(options={})
@@ -41,8 +43,7 @@ class Teacher
       receive_raise(@target_raise)
       response = "Yay, I'm a great employee!"
     else
-      response += "Oh, well -- thanks to this actionable, specific, and kind "
-      response += "feedback, I'll do better next time."
+    response = "Oh, well -- thanks to this actionable, specific, and kind feedback, I'll do better next time."
     end
     response
   end
