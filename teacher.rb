@@ -5,11 +5,12 @@ class Teacher < Instructors
   attr_reader :salary, :phase, :performance_rating, :target_raise
   # attr_reader :age
   # attr_accessor :name
-
+  RATING = 90
   def initialize(options={})
     super
     @target_raise = 1000
     @phase = 3
+   # @unique_rating = 90
   end
   #   @age = options.fetch(:age, 0)
   #   @name = options.fetch(:name, "")
@@ -43,7 +44,7 @@ class Teacher < Instructors
 
   def set_performance_rating(rating)
     response = ""
-    if rating > 90
+    if rating > self.class::RATING
       receive_raise(@target_raise)
       response = "Yay, I'm a great employee!"
     else
