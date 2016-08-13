@@ -2,8 +2,13 @@ require_relative 'person'
 
 class Instructor < Person
 
+  def initialize(options = {})
+    @target_raise = 800
+    @phase = 3
+  end
+
   def set_phase(num)
-    @phase = self.class.INITIAL_PHASE + num
+    self.class.phase = self.class.phase + num
     "Cool, I've always wanted to teach phase #{num}!"
   end
 
@@ -17,7 +22,7 @@ class Instructor < Person
   end
 
   def target_raise
-    self.class.TARGET_RAISE
+    self.class.target_raise
   end
 
 end
